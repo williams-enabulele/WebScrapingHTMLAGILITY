@@ -101,12 +101,6 @@ namespace ScrapingPractice
             var path = basePath.Substring(0, basePath.Length - 4);
             string json = JsonConvert.SerializeObject(books, Formatting.Indented);
             File.WriteAllText($"{path}/books.json", json);
-
-            /*var enviroment = System.Environment.CurrentDirectory;
-            string basePath = Directory.GetParent(enviroment).Parent.FullName;
-            var path = basePath.Substring(0, basePath.Length - 4);
-            string json = JsonSerializer.Serialize(books);
-            File.WriteAllText($"{path}/books.json", json);*/
         }
     }
 }
